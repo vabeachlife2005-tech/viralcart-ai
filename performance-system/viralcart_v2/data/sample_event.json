@@ -1,0 +1,1 @@
+{"event_id":"example-worker-run-001","occurred_at":"2026-11-23T11:00:00+00:00","kind":"worker_run","worker":"creative","source":"worker output","evidence":"link-or-specific-file-reference","status":"blocked","deliverable":"Sample storyboard awaiting authorized product assets","blocker":"No rights-cleared product assets","owner":"creative","next_action":"Obtain approved assets"}

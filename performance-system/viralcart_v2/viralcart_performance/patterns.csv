@@ -1,0 +1,26 @@
+pattern,owner,application,acceptance_test
+Evidence ledger,All,Record source and timestamp for every result,100% claimed completions have evidence
+Schema-first output,All,Use fixed fields for deliverables,No missing required fields
+Baseline vs candidate,All,Compare each upgrade to prior process,Comparison includes same test case
+Failure-to-test loop,All,Convert every error into repeatable regression test,One regression test per new failure
+Human approval gates,All,Require approval before sends purchases or deployment,Zero unauthorized actions
+Confidence labels,All,Mark observed estimated or hypothesis,No unlabeled forecasts
+Weekly ICE ranking,Growth,Score impact confidence ease,Every experiment ranked
+Stop rules,Growth,Set experiment halt threshold,Every experiment has stop condition
+Scenario forecasts,Growth,Use downside base upside with assumptions,All forecasts include falsification signal
+Competitor teardown,Growth,Document first revenue and acquisition channel,At least two dated sources per deep dive
+Decision log,Growth,Log choice owner rationale date,No unowned strategic decision
+Lead source verification,Lead,Verify official contact routes,100% contacts have URL
+Lead fit scoring,Lead,Score reachability and product fit,Top five ranked
+Contact suppression,Lead/Systems,Exclude bounced opted-out duplicates,Zero suppressed contacts in drafts
+Personalization rubric,Lead,Check product fact hook and CTA,All drafts pass five-point checklist
+Response classification,Lead/Growth,Separate bots from real interest,No bot counted as lead
+Creative hook A/B,Creative,Produce two distinct opening concepts,Two distinct hooks per sample
+Product truth QA,Creative,Check visuals and claims against source,No unsupported features
+First-pass acceptance,Creative,Track approved outputs without revision,Measured acceptance rate
+Full cost accounting,Creative,Count model labor retries revisions,Cost per accepted asset recorded
+Prompt version registry,Systems,Track prompt source license version,Every benchmark has version
+Adversarial evals,Systems,Test injection and edge cases,At least one edge case per eval set
+Trace and retry logging,Systems/Website,Record failed jobs and safe retries,Failures observable and capped
+Accessibility and CTA smoke tests,Website,Test mobile links and forms,Critical user journey passes
+Staged rollout and rollback,Website,Require tests and explicit approval,Each deploy has rollback plan
