@@ -1,0 +1,43 @@
+
+name: Install ViralCart Performance System
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract performance system
+        run: |
+          python - <<'PY'
+          import glob, zipfile, pathlib, shutil
+          zips = glob.glob("ViralCart_Performance*.zip")
+          if not zips:
+              raise SystemExit("Performance ZIP not found")
+          archive = pathlib.Path(zips[-1])
+          target = pathlib.Path("performance-system")
+          target.mkdir(exist_ok=True)
+          with zipfile.ZipFile(archive) as z:
+              for info in z.infolist():
+                  dest = (target / info.filename).resolve()
+                  if not dest.is_relative_to(target.resolve()):
+                      raise ValueError("Unsafe archive path")
+              z.extractall(target)
+          print("Extracted", archive)
+          PY
+
+      - name: Create installation pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "Install ViralCart performance system"
+          branch: "install/performance-system"
+          title: "Install ViralCart Performance System"
+          body: "Extract performance system for review."
+          add-paths: performance-system/
