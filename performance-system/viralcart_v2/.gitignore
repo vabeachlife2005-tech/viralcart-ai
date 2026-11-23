@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/events.jsonl
+data/audit.jsonl
+reports/
+.env
